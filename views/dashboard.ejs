@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+
+<div class="container mt-5">
+  <h1>Welcome, <%= user.username %>!</h1>
+  <p>This is your dashboard. You can view messages, update your profile, and chat with other users.</p>
+
+  <div class="mt-4">
+    <a href="/messages" class="btn btn-primary">Go to Messages</a>
+    <a href="/profile" class="btn btn-secondary">Edit Profile</a>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

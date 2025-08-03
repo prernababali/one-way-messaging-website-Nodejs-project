@@ -1,0 +1,25 @@
+<%- include('../partials/header') %>
+
+<div class="container mt-5">
+  <h2>Compose Message</h2>
+
+  <form action="/messages/compose" method="POST">
+    <div class="mb-3">
+      <label for="receiverId" class="form-label">Select Recipient</label>
+      <select name="receiverId" class="form-control" required>
+        <% users.forEach(user => { %>
+          <option value="<%= user._id %>"><%= user.username %></option>
+        <% }) %>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="content" class="form-label">Message</label>
+      <textarea name="content" class="form-control" rows="4" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Send</button>
+  </form>
+</div>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,30 @@
+<%- include('partials/header') %>
+
+
+
+<div class="container mt-5">
+  <h2>Edit Profile</h2>
+<form method="POST" action="/profile/update">
+
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input type="text" name="username" id="username" class="form-control" value="<%= user.username %>" required>
+    </div>
+    <div class="mb-3">
+      <label for="bio" class="form-label">Bio</label>
+      <textarea name="bio" id="bio" class="form-control" rows="3"><%= user.bio %></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Update</button>
+  </form>
+</div>
+
+
+<script>
+  setTimeout(() => {
+    document.querySelectorAll('.text-success, .text-danger').forEach(msg => msg.remove());
+  }, 2500);
+</script>
+
+
+
+<%- include('partials/footer') %>
