@@ -2,7 +2,6 @@
 
 A full-stack messaging platform where users can securely sign up, log in, view their inbox, and exchange direct messages with others. Built using **Node.js**, **Express**, **MongoDB**, and **EJS**, this app showcases secure session-based communication, user authentication, CRUD operations, profile management, and basic one-on-one messaging functionality — all wrapped in a clean Bootstrap interface.
 
----
 
 ## ✨ Overview
 
@@ -10,7 +9,6 @@ A full-stack messaging platform where users can securely sign up, log in, view t
 
 It follows a clean MVC-style structure with the use of middleware, flash alerts, and database persistence using **Mongoose ODM** for MongoDB.
 
----
 
 ## 🚀 Core Features
 
@@ -35,7 +33,7 @@ It follows a clean MVC-style structure with the use of middleware, flash alerts,
 ### 🛡️ Protected Routes
 - Middleware `ensureAuth` restricts access to messaging, profile, and dashboard pages unless logged in
 
----
+
 
 ## 📸 Screenshots
 
@@ -47,15 +45,10 @@ It follows a clean MVC-style structure with the use of middleware, flash alerts,
 >  
 > ![Chat](./screenshots/chat.png)
 
-> 👤 **Profile Editing**
->  
-> ![Profile](./screenshots/profile.png)
 
-📁 _Ensure your images are inside a `/screenshots` folder in the project root._
-
----
 
 ## ⚙️ Technologies Used
+
 
 | Category     | Stack                            |
 |--------------|----------------------------------|
@@ -71,33 +64,49 @@ It follows a clean MVC-style structure with the use of middleware, flash alerts,
 ## 🗂️ Folder Structure
 
 messaging-app/
+
 ├── app.js
+
 ├── .env
+
 ├── models/
+
 │ ├── User.js
+
 │ └── Message.js
+
 ├── routes/
+
 │ ├── auth.js // Register, login, logout
+
 │ ├── messages.js // Chat system
+
 │ └── profile.js // Profile view and update
+
 ├── views/
+
 │ ├── auth/ // login.ejs, register.ejs
+
 │ ├── partials/ // header.ejs, footer.ejs, flash.ejs
+
 │ ├── dashboard.ejs
+
 │ ├── profile.ejs
+
 │ ├── chat.ejs
+
 │ ├── messages/
+
 │ │ ├── inbox.ejs
+
 │ │ └── compose.ejs
+
 │ └── error.ejs
+
 ├── public/ // Static assets (CSS, images)
+
 └── package.json
 
-markdown
-Copy
-Edit
-
----
 
 ## 🔧 How It Works
 
@@ -118,46 +127,7 @@ Edit
 - Bio is stored in the `User` model
 - Flash message confirms update with “Profile updated!”
 
----
 
-## 🛠️ Getting Started
-
-### 1️⃣ Install Dependencies
-```bash
-npm install
-2️⃣ Setup Environment Variables
-Create a .env file at the root with the following:
-
-env
-Copy
-Edit
-MONGO_URI=your_mongodb_connection_string
-SESSION_SECRET=your_secure_secret
-3️⃣ Run the Application
-bash
-Copy
-Edit
-npm start
-Visit http://localhost:3000 in your browser.
-
-✅ Assignment Checklist
-Requirement	Status
-User registration & login (local strategy)	✅
-Secure session handling (MongoDB store)	✅
-Protected routes (middleware)	✅
-Flash messages for form feedback	✅
-Messaging between users	✅
-Profile editing	✅
-Bootstrap-styled EJS templates	✅
-Folder structure + MVC separation	✅
-
-🚫 Optional Features (Not Implemented)
-Feature	Status
-Real-time chat (WebSockets)	❌
-Profile pictures/avatar	❌
-Search messages/users	❌
-Notification system	❌
-REST API or mobile-ready frontend	❌
 
 🧠 What You’ll Learn (Talking Points)
 When presenting this to your instructor or interviewer, here’s what you can emphasize:
@@ -172,14 +142,7 @@ How EJS templates dynamically render content based on user and route data
 
 The balance of security, simplicity, and user experience in a form-based app
 
-🙌 Credits
-This project was built using the following open-source tools:
 
-Express.js
-
-MongoDB
-
-Passport.js
 
 Bootstrap
 
