@@ -135,4 +135,4 @@ messaging-app/
 
 
 
-Developed by [Your Name Here] as part of a backend full-stack Node.js course assignment.
+Developed by Prerana Bubbly as part of a backend full-stack Node.js course assignment.
