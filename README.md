@@ -1,67 +1,60 @@
-# 💬 Secure Messaging Web Application
+# Secure Messaging Web Application
 
-A full-stack messaging platform where users can securely sign up, log in, view their inbox, and exchange direct messages with others. Built using **Node.js**, **Express**, **MongoDB**, and **EJS**, this app showcases secure session-based communication, user authentication, CRUD operations, profile management, and basic one-on-one messaging functionality — all wrapped in a clean Bootstrap interfaces.
-
-
-## ✨ Overview
-
-> This project was developed as part of a full-stack assignment with a strong emphasis on secure authentication, real-time user interaction via form-based messaging, session handling, and dynamic views using server-side rendering.
-
-It follows a clean MVC-style structure with the use of middleware, flash alerts, and database persistence using **Mongoose ODM** for MongoDB.
+A full-stack messaging platform where users can securely sign up, log in, view their inbox, and exchange direct messages with others. Built using **Node.js**, **Express**, **MongoDB**, and **EJS**, this app showcases secure session-based communication, user authentication, CRUD operations, profile management, and basic one-on-one messaging functionality — all wrapped in a clean Bootstrap interfaces. This project was developed as part of a full-stack assignment with a strong emphasis on secure authentication, real-time user interaction via form-based messaging, session handling, and dynamic views using server-side rendering. It follows a clean MVC-style structure with the use of middleware, flash alerts, and database persistence using **Mongoose ODM** for MongoDB.
 
 
-## 🚀 Core Features
+## Core Features
 
-### 🔐 Authentication & Session Management
+### Authentication & Session Management
 - Register/login using email and password
 - Passwords are securely hashed via `bcryptjs`
 - Persistent sessions managed using `express-session` with MongoDB storage
 
-### 📬 One-to-One Messaging System
+### One-to-One Messaging System
 - Authenticated users can view an inbox, select a recipient, and exchange messages
 - Chat history is stored and sorted chronologically
 - Messages are stored in a separate Mongoose model with sender/receiver references
 
-### 🧑 User Profile
+### User Profile
 - Authenticated users can view and update their personal profile (bio, display name)
 - Profile page shows current user data with live updates
 
-### 📨 Flash Messaging
+### Flash Messaging
 - Success/error messages are displayed using `connect-flash` for better UX
 - Alerts shown on registration, login, logout, and profile updates
 
-### 🛡️ Protected Routes
+### Protected Routes
 - Middleware `ensureAuth` restricts access to messaging, profile, and dashboard pages unless logged in
 
 
 
-## 📸 Screenshots
+## Screenshots
 
-> 🖼️ **Dashboard**
+> **Dashboard**
 >  
 > ![Dashboard](./screenshots/dashboard.png)
 
-> 💬 **Chat Interface**
+> **Chat Interface**
 >  
 > ![Chat](./screenshots/chat.png)
 
 
 
-## ⚙️ Technologies Used
+## Technologies Used
 
 
-| Category     | Stack                            |
-|--------------|----------------------------------|
+| Category     | Stack                                  |
+|--------------|----------------------------------------|
 | Frontend     | EJS (Embedded JavaScript), Bootstrap 5 |
-| Backend      | Node.js, Express.js              |
-| Database     | MongoDB + Mongoose               |
-| Auth         | Passport.js (Local Strategy)     |
-| Sessions     | express-session + connect-mongo  |
-| Flash Alerts | connect-flash                    |
+| Backend      | Node.js, Express.js                    |
+| Database     | MongoDB + Mongoose                     |
+| Auth         | Passport.js (Local Strategy)           |
+| Sessions     | express-session + connect-mongo        |
+| Flash Alerts | connect-flash                          |
 
----
 
-## 🗂️ Folder Structure
+
+## Folder Structure
 
 messaging-app/
 
@@ -108,44 +101,38 @@ messaging-app/
 └── package.json
 
 
-## 🔧 How It Works
+## How It Works
 
-### ✅ Authentication Flow
+### Authentication Flow
 - New users register via `/register`
 - On login (`/login`), Passport.js verifies credentials
 - `express-session` stores session ID in cookie
 - Middleware protects all routes requiring auth
 
-### 💌 Messaging Logic
+###  Messaging Logic
 - Each message has a `sender`, `receiver`, `content`, and `createdAt`
 - Messages are retrieved by filtering messages where `req.user` is either sender or receiver
 - `/messages/inbox` shows messages received
 - `/messages/chat/:id` opens a private conversation thread
 
-### 👤 Profile Update
+###  Profile Update
 - Users can update their `bio` via `/profile`
 - Bio is stored in the `User` model
 - Flash message confirms update with “Profile updated!”
 
 
+## What You’ll Learn (Talking Points)
+1.  How Passport.js helps in secure login workflows
 
-🧠 What You’ll Learn (Talking Points)
-When presenting this to your instructor or interviewer, here’s what you can emphasize:
+2.  How middleware protects routes and ensures session persistence
 
-How Passport.js helps in secure login workflows
+3.  How MongoDB is structured for 1-to-1 messaging (sender/receiver with object refs)
 
-How middleware protects routes and ensures session persistence
+4.  How EJS templates dynamically render content based on user and route data
 
-How MongoDB is structured for 1-to-1 messaging (sender/receiver with object refs)
-
-How EJS templates dynamically render content based on user and route data
-
-The balance of security, simplicity, and user experience in a form-based app
+5.  The balance of security, simplicity, and user experience in a form-based app
 
 
 
-Bootstrap
-
-EJS
 
 Developed by [Your Name Here] as part of a backend full-stack Node.js course assignment.
