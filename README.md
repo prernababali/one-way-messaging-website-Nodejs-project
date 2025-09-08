@@ -1,6 +1,6 @@
 # 💬 Secure Messaging Web Application
 
-A full-stack messaging platform where users can securely sign up, log in, view their inbox, and exchange direct messages with others. Built using **Node.js**, **Express**, **MongoDB**, and **EJS**, this app showcases secure session-based communication, user authentication, CRUD operations, profile management, and basic one-on-one messaging functionality — all wrapped in a clean Bootstrap interface.
+A full-stack messaging platform where users can securely sign up, log in, view their inbox, and exchange direct messages with others. Built using **Node.js**, **Express**, **MongoDB**, and **EJS**, this app showcases secure session-based communication, user authentication, CRUD operations, profile management, and basic one-on-one messaging functionality — all wrapped in a clean Bootstrap interfaces.
 
 
 ## ✨ Overview
